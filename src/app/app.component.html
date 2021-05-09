@@ -2,21 +2,29 @@
   <h1 class="text-xl font-bold text-center mb-6">My Profile</h1>
   <div class="grid grid-cols-2 gap-8">
     <app-data-view icon="info" caption="Name">
+      <app-action-button actions icon="edit" label="Edit"></app-action-button>
       <span class="font-bold">John Smith</span>
     </app-data-view>
     <app-data-view icon="event" caption="Date of Birth">
+      <app-action-button actions icon="edit" label="Edit"></app-action-button>
       9th August 1987
     </app-data-view>
     <app-data-view icon="paid" caption="Balance">
+      <app-action-button actions icon="payment" label="Re charge"></app-action-button>
       {{100 | currency}}
     </app-data-view>
     <app-data-view icon="account_circle" caption="Status">
       <span class="px-2 bg-green-500 rounded-xl text-white">Active</span>
     </app-data-view>
     <app-data-view icon="portrait" caption="Photo">
+      <div actions class="flex flex-row">
+        <app-action-button class="mr-1" icon="upload" label="Upload"></app-action-button>
+        <app-action-button icon="insert_drive_file" label=" G Drive"></app-action-button>
+      </div>
       <img src="https://source.unsplash.com/WMD64tMfc4k/200x200">
     </app-data-view>
     <app-data-view icon="text_snippet" caption="Short bio">
+      <app-action-button actions icon="edit" label="Edit"></app-action-button>
       <div>
         Hey, I'm John. I <strong>love</strong> creating rich interactive apps on the <strong>Angular framework</strong>.
         <br>

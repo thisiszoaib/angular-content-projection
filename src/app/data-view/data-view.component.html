@@ -2,6 +2,8 @@
     <div class="flex flex-row items-center text-gray-600 border-b border-gray-300 mb-1">
         <span class="material-icons mr-1 text-xl">{{icon}}</span>
         <span class="uppercase text-xs font-bold">{{caption}}</span>
+        <span class="flex-grow"></span>
+        <ng-content select="[actions]"></ng-content>
     </div>
     <div class="pt-1">
         <ng-content></ng-content>
